@@ -1,3 +1,9 @@
+pub mod oracle;
+pub mod framing;
+pub mod client;    
+pub mod transport; 
+pub mod vpn;
+
 use serde::{Serialize, Deserialize};
 
 // --- CONFIGURATION ---
