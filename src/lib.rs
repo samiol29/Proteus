@@ -7,8 +7,8 @@ pub const SERVER_ADDR: &str = "127.0.0.1:8080";
 pub const MAX_UDP_SIZE: usize = 1400;
 
 // RaptorQ Symbol Size (Must be identical on Client and Server)
-// We choose 1024. This fits easily inside a 1400 byte UDP packet.
-pub const SYMBOL_SIZE: u16 = 1024; 
+// (512 bytes + Base64 expansion = ~680 bytes. This is tiny and will never get blocked).
+pub const SYMBOL_SIZE: u16 = 512; 
 
 // --- THE PROTOCOL ---
 #[derive(Serialize, Deserialize, Debug)]
